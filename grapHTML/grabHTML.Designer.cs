@@ -1,6 +1,6 @@
 ﻿namespace grabHTML
 {
-    partial class grapHTML
+    partial class grabHTML
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -33,7 +33,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.printfmsg = new System.Windows.Forms.TextBox();
             this.qqbotpath = new System.Windows.Forms.TextBox();
-            this.name = new System.Windows.Forms.TextBox();
             this.start = new System.Windows.Forms.Button();
             this.type = new System.Windows.Forms.ComboBox();
             this.htmlpath = new System.Windows.Forms.TextBox();
@@ -43,6 +42,8 @@
             this.open = new System.Windows.Forms.Button();
             this.lookup = new System.Windows.Forms.Button();
             this.qqbot = new System.Diagnostics.Process();
+            this.listname = new System.Windows.Forms.ListView();
+            this.qq = new System.Diagnostics.Process();
             this.SuspendLayout();
             // 
             // webBrowser
@@ -62,13 +63,13 @@
             // 
             // printfmsg
             // 
-            this.printfmsg.Location = new System.Drawing.Point(12, 128);
+            this.printfmsg.Location = new System.Drawing.Point(163, 124);
             this.printfmsg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.printfmsg.MaxLength = 100;
             this.printfmsg.Multiline = true;
             this.printfmsg.Name = "printfmsg";
             this.printfmsg.ReadOnly = true;
-            this.printfmsg.Size = new System.Drawing.Size(359, 499);
+            this.printfmsg.Size = new System.Drawing.Size(579, 243);
             this.printfmsg.TabIndex = 1;
             // 
             // qqbotpath
@@ -80,15 +81,6 @@
             this.qqbotpath.ReadOnly = true;
             this.qqbotpath.Size = new System.Drawing.Size(605, 25);
             this.qqbotpath.TabIndex = 3;
-            // 
-            // name
-            // 
-            this.name.Cursor = System.Windows.Forms.Cursors.Default;
-            this.name.Location = new System.Drawing.Point(163, 92);
-            this.name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(208, 25);
-            this.name.TabIndex = 5;
             // 
             // start
             // 
@@ -108,7 +100,7 @@
             this.type.Location = new System.Drawing.Point(12, 92);
             this.type.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.type.Name = "type";
-            this.type.Size = new System.Drawing.Size(130, 23);
+            this.type.Size = new System.Drawing.Size(145, 23);
             this.type.TabIndex = 7;
             // 
             // htmlpath
@@ -117,13 +109,12 @@
             this.htmlpath.Location = new System.Drawing.Point(12, 55);
             this.htmlpath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.htmlpath.Name = "htmlpath";
-            this.htmlpath.ReadOnly = true;
             this.htmlpath.Size = new System.Drawing.Size(605, 25);
             this.htmlpath.TabIndex = 3;
             // 
             // runqq
             // 
-            this.runqq.Location = new System.Drawing.Point(377, 92);
+            this.runqq.Location = new System.Drawing.Point(284, 92);
             this.runqq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.runqq.Name = "runqq";
             this.runqq.Size = new System.Drawing.Size(119, 28);
@@ -134,13 +125,13 @@
             // 
             // printout
             // 
-            this.printout.Location = new System.Drawing.Point(377, 128);
+            this.printout.Location = new System.Drawing.Point(163, 375);
             this.printout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.printout.MaxLength = 100;
             this.printout.Multiline = true;
             this.printout.Name = "printout";
             this.printout.ReadOnly = true;
-            this.printout.Size = new System.Drawing.Size(365, 499);
+            this.printout.Size = new System.Drawing.Size(579, 252);
             this.printout.TabIndex = 8;
             // 
             // browse
@@ -166,12 +157,12 @@
             // 
             // lookup
             // 
-            this.lookup.Location = new System.Drawing.Point(502, 92);
+            this.lookup.Location = new System.Drawing.Point(163, 92);
             this.lookup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lookup.Name = "lookup";
             this.lookup.Size = new System.Drawing.Size(115, 28);
             this.lookup.TabIndex = 12;
-            this.lookup.Text = "查看列表";
+            this.lookup.Text = "更新列表";
             this.lookup.UseVisualStyleBackColor = true;
             this.lookup.Click += new System.EventHandler(this.lookup_Click);
             // 
@@ -188,17 +179,36 @@
             this.qqbot.OutputDataReceived += new System.Diagnostics.DataReceivedEventHandler(this.qqbot_OutputDataReceived);
             this.qqbot.Exited += new System.EventHandler(this.qqbot_Exited);
             // 
-            // grapHTML
+            // listname
+            // 
+            this.listname.Location = new System.Drawing.Point(13, 124);
+            this.listname.Name = "listname";
+            this.listname.Size = new System.Drawing.Size(144, 502);
+            this.listname.TabIndex = 13;
+            this.listname.UseCompatibleStateImageBehavior = false;
+            // 
+            // qq
+            // 
+            this.qq.EnableRaisingEvents = true;
+            this.qq.StartInfo.Domain = "";
+            this.qq.StartInfo.LoadUserProfile = false;
+            this.qq.StartInfo.Password = null;
+            this.qq.StartInfo.StandardErrorEncoding = null;
+            this.qq.StartInfo.StandardOutputEncoding = null;
+            this.qq.StartInfo.UserName = "";
+            this.qq.SynchronizingObject = this;
+            // 
+            // grabHTML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 638);
+            this.Controls.Add(this.listname);
             this.Controls.Add(this.open);
             this.Controls.Add(this.browse);
             this.Controls.Add(this.printout);
             this.Controls.Add(this.type);
             this.Controls.Add(this.start);
-            this.Controls.Add(this.name);
             this.Controls.Add(this.htmlpath);
             this.Controls.Add(this.qqbotpath);
             this.Controls.Add(this.webBrowser);
@@ -206,9 +216,9 @@
             this.Controls.Add(this.runqq);
             this.Controls.Add(this.lookup);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "grapHTML";
+            this.Name = "grabHTML";
             this.Text = "grabHTML";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.modianInfo_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.grabHTML_FormClosing);
             this.Load += new System.EventHandler(this.grabHTML_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -221,7 +231,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox printfmsg;
         private System.Windows.Forms.TextBox qqbotpath;
-        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Button start;
         private System.Windows.Forms.ComboBox type;
         private System.Windows.Forms.TextBox htmlpath;
@@ -231,6 +240,8 @@
         private System.Windows.Forms.Button open;
         private System.Windows.Forms.Button lookup;
         private System.Diagnostics.Process qqbot;
+        private System.Windows.Forms.ListView listname;
+        private System.Diagnostics.Process qq;
     }
 }
 

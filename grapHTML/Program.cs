@@ -16,7 +16,7 @@ namespace grabHTML
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new grapHTML());
+            Application.Run(new grabHTML());
         }
     }
 }

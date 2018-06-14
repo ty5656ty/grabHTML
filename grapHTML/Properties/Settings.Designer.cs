@@ -46,29 +46,5 @@ namespace grabHTML.Properties {
                 this["qqbot"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string type {
-            get {
-                return ((string)(this["type"]));
-            }
-            set {
-                this["type"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string name {
-            get {
-                return ((string)(this["name"]));
-            }
-            set {
-                this["name"] = value;
-            }
-        }
     }
 }

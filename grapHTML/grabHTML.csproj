@@ -79,16 +79,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="grapHTML.cs">
+    <Compile Include="grabHTML.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="grapHTML.Designer.cs">
-      <DependentUpon>grapHTML.cs</DependentUpon>
+    <Compile Include="grabHTML.Designer.cs">
+      <DependentUpon>grabHTML.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="grapHTML.resx">
-      <DependentUpon>grapHTML.cs</DependentUpon>
+    <EmbeddedResource Include="grabHTML.resx">
+      <DependentUpon>grabHTML.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
