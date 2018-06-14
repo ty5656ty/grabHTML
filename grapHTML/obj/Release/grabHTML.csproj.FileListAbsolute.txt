@@ -1,0 +1,11 @@
+C:\Users\jxj\Documents\Visual Studio 2017\Projects\grabHTML\grapHTML\bin\Release\readInfo.js
+C:\Users\jxj\Documents\Visual Studio 2017\Projects\grabHTML\grapHTML\bin\Release\grabHTML.exe.config
+C:\Users\jxj\Documents\Visual Studio 2017\Projects\grabHTML\grapHTML\bin\Release\grabHTML.exe
+C:\Users\jxj\Documents\Visual Studio 2017\Projects\grabHTML\grapHTML\bin\Release\grabHTML.pdb
+C:\Users\jxj\Documents\Visual Studio 2017\Projects\grabHTML\grapHTML\bin\Release\Newtonsoft.Json.dll
+C:\Users\jxj\Documents\Visual Studio 2017\Projects\grabHTML\grapHTML\bin\Release\Newtonsoft.Json.xml
+C:\Users\jxj\Documents\Visual Studio 2017\Projects\grabHTML\grapHTML\obj\Release\grabHTML.grapHTML.resources
+C:\Users\jxj\Documents\Visual Studio 2017\Projects\grabHTML\grapHTML\obj\Release\grabHTML.Properties.Resources.resources
+C:\Users\jxj\Documents\Visual Studio 2017\Projects\grabHTML\grapHTML\obj\Release\grabHTML.csproj.GenerateResource.Cache
+C:\Users\jxj\Documents\Visual Studio 2017\Projects\grabHTML\grapHTML\obj\Release\grabHTML.exe
+C:\Users\jxj\Documents\Visual Studio 2017\Projects\grabHTML\grapHTML\obj\Release\grabHTML.pdb
