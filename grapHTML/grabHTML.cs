@@ -26,8 +26,8 @@ namespace grabHTML
 
         Uri uri;
         HtmlElement script;
+        qqbotStatus status;
         int qqbotid;
-        bool qqbotrun;
         string js;
         object[] index = new object[1];
         object[] id = new object[1];
@@ -39,7 +39,7 @@ namespace grabHTML
             index[0] = int.MaxValue;
             htmlpath.Text = Properties.Settings.Default.html;
             qqbotpath.Text = Properties.Settings.Default.qqbot;
-            qqbotrun = false;
+            status = qqbotStatus.shutdown;
             start.Enabled = false;
             webBrowser.ScriptErrorsSuppressed = true;
         }
@@ -71,7 +71,7 @@ namespace grabHTML
 
         private void runqq_Click(object sender, EventArgs e)
         {
-            if (qqbotrun)
+            if (status != qqbotStatus.shutdown)
             {
                 stopqq();
             }
@@ -98,7 +98,7 @@ namespace grabHTML
                 qqbot.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                 qqbot.Start();
                 qqbot.BeginOutputReadLine();
-                qqbotrun = true;
+                status = qqbotStatus.running;
                 qqbotid = qqbot.Id;
                 runqq.Enabled = false;
                 start.Enabled = true;
@@ -122,9 +122,9 @@ namespace grabHTML
                 MessageBox.Show("不是正确的qqbot路径");
                 return;
             }
-            if (htmlpath.Text.IndexOf("https://zhongchou.modian.com/item/") != 0)
+            if (!(htmlpath.Text.IndexOf("https://") == 0 || htmlpath.Text.IndexOf("http://") == 0))
             {
-                MessageBox.Show("请输入正确的摩点项目网址");
+                MessageBox.Show("请输入正确的网址");
                 return;
             }
             Properties.Settings.Default.html= htmlpath.Text.Trim();
@@ -183,7 +183,7 @@ namespace grabHTML
         private void qqbot_Exited(object sender, EventArgs e)
         {
             qqbot.CancelOutputRead();
-            qqbotrun = false;
+            status = qqbotStatus.shutdown;
             start.Enabled = false;
             lookup.Enabled = false;
             runqq.Text = "启动机器人";
@@ -196,10 +196,14 @@ namespace grabHTML
 
         private void stopqq()
         {
-            if (qqbotrun)
+            if (status == qqbotStatus.running)
             {
                 qq.StartInfo.Arguments = "stop";
                 qq.Start();
+            }
+            if (status == qqbotStatus.logging)
+            {
+                MessageBox.Show("qqbot is logging, error!!!");
             }
         }
     }

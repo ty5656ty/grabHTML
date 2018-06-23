@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="userDefine.cs" />
     <EmbeddedResource Include="grabHTML.resx">
       <DependentUpon>grabHTML.cs</DependentUpon>
     </EmbeddedResource>
